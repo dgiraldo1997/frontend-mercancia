@@ -1,27 +1,30 @@
-# MercanciaApp
+# Prueba Nexos Fr
+## _Front - End_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-## Development server
+Proyecto SPA creado con Angular para la gestion de los siguientes modulos:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Usuarios (crear, editar, listar, eliminar)
+- Cargos (crear, editar, listar, eliminar)
+- Mercancia (crear, editar, listar, eliminar)
+## Tecnologias implementadas
 
-## Code scaffolding
+- Angular 12
+- Typescript
+- Bootstrap
+- Scss
+- Postman
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Video de presentación
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Video] - muestra de la estructura
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+MIT
 
-## Running end-to-end tests
+**Free Software, Yeah!**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Video]: <https://drive.google.com/file/d/1u6bGZ2va4X6tjvVddkW5r3OGU8fsBnJm/view?usp=sharing>
