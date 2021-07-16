@@ -1,0 +1,50 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Prueba Nexos Mercancia App</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Mercancia</h5>
+      <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/mercancias/form']">Crear Mercancia</button>
+      </div>
+      <div *ngIf="mercancias.length == 0" class="alert alert-info">
+        <h1>No tenemos mercancia almacenada</h1>
+      </div>
+      <form class="form-inline my-2 my-lg-0 search-form">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Nombre" aria-label="Search"  [(ngModel)]="nombreBuscar"  name="nombreBuscar">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscarMercancia()">Buscar</button>
+      </form>
+      <table class="table table-bordeared table-striped" *ngIf="mercancias.length > 0">
+          <thead>
+           <tr>
+             <th>Id</th> 
+             <th>Nombre</th> 
+             <th>Cantidad</th>
+             <th>Usuario Crea</th>
+             <th>Usuario Edita</th>
+             <th>Fecha Creacion</th> 
+             <th>Fecha Actualizacion</th>
+             <th>Activo</th>
+             <th colspan="2" class="text-center">Acciones</th> 
+          </tr>   
+          </thead> 
+          <tbody>
+              <tr *ngFor="let mercancia of mercancias">
+                  <td>{{mercancia.id}}</td>
+                  <td>{{mercancia.nombre}}</td>
+                  <td>{{mercancia.cantidad}}</td>
+                  <td>{{mercancia.usuariocrea.nombre}} {{mercancia.usuariocrea.apellido}}</td>
+                  <td>{{mercancia.usuarioedita.nombre}} {{mercancia.usuarioedita.apellido}}</td>
+                  <td>{{mercancia.createdAt}}</td>
+                  <td>{{mercancia.updatedAt}}</td>
+                  <td *ngIf="mercancia.activo==true"><span class="badge badge-success">Activo</span></td>
+                  <td *ngIf="mercancia.activo==false"><span class="badge badge-danger">Inactivo</span></td>
+                  <td>
+                    <button type="button" name="button" [routerLink]="['/mercancias/form', mercancia.id]" class="btn btn-primary">Editar</button>
+                  </td>
+                  <td>
+                    <button type="button" name="eliminar" (click)='delete(mercancia)' class="btn btn-danger">Eliminar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mercancia-app';
+  title = 'Software G2&TI';
+  empresa: string = 'Giraldo Tecnologia e Informacion';
+  aliado: string = 'Nexos Software';
+  desarrollador: string ='Daniel Giraldo Ramirez';
 }
